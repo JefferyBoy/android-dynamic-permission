@@ -1,3 +1,4 @@
+// 使用dpermission-gradle-plugin中的插件jeffery-dpermission或者本gradle文件都可以
 import org.aspectj.bridge.IMessage
 import org.aspectj.bridge.MessageHandler
 import org.aspectj.tools.ajc.Main
@@ -15,11 +16,6 @@ buildscript {
     }
 }
 variants.all { variant ->
-    if (!variant.buildType.isDebuggable()) {
-        log.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
-        return;
-    }
-
     JavaCompile javaCompile = variant.javaCompile
     javaCompile.doLast {
         String[] args = ["-showWeaveInfo",
@@ -29,7 +25,8 @@ variants.all { variant ->
                          "-d", javaCompile.destinationDir.toString(),
                          "-classpath", javaCompile.classpath.asPath,
                          "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
-        log.debug "ajc args: " + Arrays.toString(args)
+        log.error "ajc args: " + Arrays.toString(args)
+        println("aspectj args: " + Arrays.toString(args))
 
         MessageHandler handler = new MessageHandler(true);
         new Main().run(args, handler);

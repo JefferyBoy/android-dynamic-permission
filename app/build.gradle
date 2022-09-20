@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
-
+//apply plugin: 'android.dpermission'
 apply from: '../aspectj.gradle'
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.github.jeffery.permissions"
         minSdk 21
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -36,6 +36,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
 
-//    implementation project(':library')
-    implementation 'com.github.JefferyBoy:dpermission:0.1.1'
+    implementation project(':dpermission')
+//    implementation 'com.github.JefferyBoy:dpermission:0.1.2'
 }

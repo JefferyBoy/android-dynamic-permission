@@ -1,16 +1,28 @@
 buildscript {
     repositories {
         google()
-        gradlePluginPortal()
         mavenCentral()
+        mavenLocal()
+        gradlePluginPortal()
     }
     dependencies {
         classpath 'org.aspectj:aspectjweaver:1.9.9.1'
         classpath 'org.aspectj:aspectjtools:1.9.9.1'
-        classpath 'com.android.tools.build:gradle:7.2.2'
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+        classpath project(':dpermission-gradle-plugin')
     }
 }
 
+allprojects {
+    group 'com.github.jeffery'
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        gradlePluginPortal()
+    }
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

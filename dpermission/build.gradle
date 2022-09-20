@@ -1,14 +1,14 @@
 apply plugin: 'com.android.library'
 
 group 'com.github.jeffery'
-version '0.1'
+version '0.1.2'
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         minSdk 16
-        targetSdk 32
+        targetSdk 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"

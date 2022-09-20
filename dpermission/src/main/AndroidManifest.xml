@@ -3,6 +3,6 @@
     package="com.github.jeffery.permission">
 
     <application>
-        <activity android:name=".PermissionActivity" />
+        <activity android:name=".PermissionActivity" android:theme="@style/ThemeTranslucent"/>
     </application>
 </manifest>

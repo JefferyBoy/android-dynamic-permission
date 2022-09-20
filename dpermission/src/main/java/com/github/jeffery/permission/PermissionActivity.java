@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -47,7 +48,7 @@ public class PermissionActivity extends Activity {
                 }
             }
         }
-        if (needReqPermission) {
+        if (needReqPermission && Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
             requestPermissions(pms, reqCode);
         } else {
             List<PermissionResult> results = new ArrayList<>();
@@ -105,7 +106,7 @@ public class PermissionActivity extends Activity {
 
     @Override
     public void finish() {
-        overridePendingTransition(0, 0);
         super.finish();
+        overridePendingTransition(0, 0);
     }
 }
