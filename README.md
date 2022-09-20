@@ -1,5 +1,7 @@
 # android动态权限申请
 
+[![](https://jitpack.io/v/JefferyBoy/dpermission.svg)](https://jitpack.io/#JefferyBoy/dpermission)
+
 使用aspectj编译期class字节码插入实现动态权限申请
 
 使用方式
@@ -13,6 +15,11 @@ buildscript {
         classpath 'org.aspectj:aspectjtools:1.9.9.1'
     }
 }
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 2. 在需要使用的模块中build.gradle中加入aspectj支持
@@ -22,7 +29,7 @@ buildscript {
 apply from: '../aspectj.gradle'
 
 dependencies {
-    implementation project(':library')
+    implementation 'com.github.JefferyBoy:dpermission:v0.1'
 }
 ```
 

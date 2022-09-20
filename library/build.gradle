@@ -2,6 +2,9 @@ plugins {
     id 'com.android.library'
 }
 
+group 'com.github.jeffery'
+version '0.1'
+
 android {
     compileSdk 32
 
