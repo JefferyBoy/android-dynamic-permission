@@ -10,9 +10,11 @@
 
 ```gradle
 buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
     dependencies {
-        classpath 'org.aspectj:aspectjweaver:1.9.9.1'
-        classpath 'org.aspectj:aspectjtools:1.9.9.1'
+        classpath 'com.github.JefferyBoy:android-aspectj-gradle-plugin:1.0.2'
     }
 }
 allprojects {
@@ -25,11 +27,10 @@ allprojects {
 2. 在需要使用的模块中build.gradle中加入aspectj支持
 
 ```gradle
-// aspectj.gradle放到项目根目录
-apply from: '../aspectj.gradle'
+apply plugin: 'android.aspectj'
 
 dependencies {
-    implementation 'com.github.JefferyBoy:dpermission:v0.1'
+    implementation 'com.github.JefferyBoy:dpermission:0.1.3'
 }
 ```
 
