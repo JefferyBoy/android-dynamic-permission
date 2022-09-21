@@ -1,4 +1,3 @@
-rootProject.name = "DynamicPermissions"
+rootProject.name = "android-dynamic-permissions"
 include ':app'
-include ':dpermission'
-include ':dpermission-gradle-plugin'
+include ':android-dynamic-permission'
