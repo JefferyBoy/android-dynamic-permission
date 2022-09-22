@@ -14,7 +14,7 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.github.JefferyBoy:android-aspectj-gradle-plugin:1.0.2'
+        classpath 'com.github.JefferyBoy:android-aspectj-gradle-plugin:1.0.3'
     }
 }
 allprojects {
@@ -30,7 +30,7 @@ allprojects {
 apply plugin: 'android.aspectj'
 
 dependencies {
-    implementation 'com.github.JefferyBoy:dpermission:0.1.3'
+    implementation 'com.github.JefferyBoy:android-dynamic-permissions:0.1.3'
 }
 ```
 

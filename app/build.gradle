@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'android.aspectj'
 
 android {
@@ -35,5 +36,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation project(':android-dynamic-permission')
-    //    implementation 'com.github.JefferyBoy:dpermission:0.1.3'
 }
