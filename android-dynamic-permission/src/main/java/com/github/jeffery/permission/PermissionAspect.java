@@ -86,7 +86,7 @@ public class PermissionAspect {
         }
         if (grantAll) {
             try {
-                joinPoint.proceed();
+                joinPoint.proceed(joinPoint.getArgs());
             } catch (Throwable e) {
                 e.printStackTrace();
             }
