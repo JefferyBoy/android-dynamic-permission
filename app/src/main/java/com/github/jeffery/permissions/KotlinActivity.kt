@@ -22,6 +22,7 @@ class KotlinActivity: AppCompatActivity(), View.OnClickListener {
         findViewById<View>(R.id.btn_camera).setOnClickListener(this)
         findViewById<View>(R.id.btn_location).setOnClickListener(this)
         findViewById<View>(R.id.btn_voice).setOnClickListener(this)
+        findViewById<View>(R.id.btn_normal_test).setOnClickListener(this)
     }
 
     @Permission(value = [Manifest.permission.WRITE_EXTERNAL_STORAGE])
@@ -58,6 +59,7 @@ class KotlinActivity: AppCompatActivity(), View.OnClickListener {
             R.id.btn_write -> requestStoragePermission()
             R.id.btn_location -> requestLocationPermission()
             R.id.btn_voice -> requestVoicePermission()
+            R.id.btn_normal_test -> KotlinNormalClass().normalClassTest(v.context)
             else -> {}
         }
     }

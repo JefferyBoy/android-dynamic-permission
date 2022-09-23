@@ -15,6 +15,7 @@ import androidx.annotation.Nullable;
 public class PermissionProvider extends ContentProvider {
     @Override
     public boolean onCreate() {
+        PermissionHelper.getInstance().init(getContext());
         return false;
     }
 

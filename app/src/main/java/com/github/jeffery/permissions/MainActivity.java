@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_camera).setOnClickListener(this);
         findViewById(R.id.btn_location).setOnClickListener(this);
         findViewById(R.id.btn_voice).setOnClickListener(this);
+        findViewById(R.id.btn_normal_test).setOnClickListener(this);
     }
 
     @Permission(value = {Manifest.permission.WRITE_EXTERNAL_STORAGE})
@@ -75,6 +76,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_voice:
                 requestVoicePermission();
+                break;
+            case R.id.btn_normal_test:
+                new JavaNormalClass().normalClassTest(v.getContext());
                 break;
             default:
         }

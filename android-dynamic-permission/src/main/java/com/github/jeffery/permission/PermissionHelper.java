@@ -21,8 +21,10 @@ public class PermissionHelper {
         return instance;
     }
 
-    public static void init(Context context) {
-        getInstance().context = context.getApplicationContext();
+    public void init(Context context) {
+        if(this.context == null && context != null) {
+            this.context = context.getApplicationContext();
+        }
     }
 
     public Context getContext() {
