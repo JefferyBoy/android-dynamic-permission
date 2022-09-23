@@ -8,7 +8,7 @@
             android:theme="@style/ThemeTranslucent" />
         <provider
             android:name=".PermissionProvider"
-            android:authorities="com.github.jeffery.permission.PermissionProvider"
+            android:authorities="${applicationId}:DynamicPermission"
             android:exported="false" />
     </application>
 </manifest>
