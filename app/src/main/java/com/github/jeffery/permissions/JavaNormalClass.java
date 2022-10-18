@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 
 import androidx.core.content.ContextCompat;
+import androidx.core.util.Consumer;
 
 import com.github.jeffery.permission.annotation.Permission;
 
@@ -24,5 +25,9 @@ public class JavaNormalClass {
         } else {
             throw new RuntimeException("normalClassTest fail");
         }
+    }
+
+    public  void normalClassTestAnonymousClass(Consumer<String> consumer) {
+        consumer.accept("hello");
     }
 }
