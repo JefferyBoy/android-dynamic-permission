@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/JefferyBoy/dpermission.svg)](https://jitpack.io/#JefferyBoy/dpermission)
 
-此项目停止维护，请移步到新项目 [!wow-gragle-plugins](https://github.com/JefferyBoy/wow-gragle-plugins/)
+此项目停止维护，请移步到新项目 [wow-gradle-plugins](https://github.com/JefferyBoy/wow-gradle-plugins)
 
 使用aspectj编译期class字节码插入实现动态权限申请
 
